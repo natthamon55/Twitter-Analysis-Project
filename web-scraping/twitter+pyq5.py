@@ -41,10 +41,10 @@ class MyApp(QWidget):
     def twit(self):
 
         #Getting authorization
-        consumer_key = '9GXyu3njexATouPqEvT9qvu7V'
-        consumer_secret = 'ysgdFhBYcFclWLCC6oYiwpWCBXweQByzjfcqKs5Fm7yA7ZZdOC'
-        access_token = '2204801114-h1YxO5itngHgvylxfAFdop7pZXYI3WzJWC1uDd6'
-        access_token_secret = 'ZCwl7NJRHrzxgPMT9LWkQ0iYEaenwgh8rGIhAxYgXg21g'
+        consumer_key = '*************'
+        consumer_secret = '**************'
+        access_token = '***********************'
+        access_token_secret = '*********************'
 
         auth = tweepy.OAuthHandler(consumer_key, consumer_secret) #การอนุญาติเข้าถึง api
         auth.set_access_token(access_token, access_token_secret)
