@@ -2,7 +2,7 @@
 #ref : https://pbj0812.tistory.com/198
 #ref  : https://www.kaggle.com/drvaibhavkumar/twitter-data-analysis-using-tweepy
 #ref : https://medium.com/botnoi-classroom/%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%A7%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%B0%E0%B8%AB%E0%B9%8C%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5-twitter-%E0%B8%95%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B9%84%E0%B8%95%E0%B8%A5%E0%B9%8C%E0%B9%82%E0%B8%AD%E0%B8%95%E0%B8%B0-bnk-%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-tweepy-pandas-%E0%B9%81%E0%B8%A5%E0%B8%B0-nlp-part-1-e454aeff443a
-
+# store data
 from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QWidget,QTableWidget, QTableWidgetItem
 from PyQt5 import uic
 from datetime import date
@@ -46,10 +46,10 @@ class MyWindowClass(QMainWindow, form_class):
        
     def twit(self):
         #Getting authorization
-        self.consumer_key = '9GXyu3njexATouPqEvT9qvu7V'
-        self.consumer_secret = 'ysgdFhBYcFclWLCC6oYiwpWCBXweQByzjfcqKs5Fm7yA7ZZdOC'
-        self.access_token = '2204801114-h1YxO5itngHgvylxfAFdop7pZXYI3WzJWC1uDd6'
-        self.access_token_secret = 'ZCwl7NJRHrzxgPMT9LWkQ0iYEaenwgh8rGIhAxYgXg21g'
+        self.consumer_key = 
+        self.consumer_secret = 
+        self.access_token = 
+        self.access_token_secret = 
 
         self.auth = tweepy.OAuthHandler(self.consumer_key, self.consumer_secret) #การอนุญาติเข้าถึง api
         self.auth.set_access_token(self.access_token, self.access_token_secret)
@@ -235,10 +235,10 @@ class MyWindowClass(QMainWindow, form_class):
    
     def thai_trendy(self):
 
-        self.consumer_key = '9GXyu3njexATouPqEvT9qvu7V'
-        self.consumer_secret = 'ysgdFhBYcFclWLCC6oYiwpWCBXweQByzjfcqKs5Fm7yA7ZZdOC'
-        self.access_token = '2204801114-h1YxO5itngHgvylxfAFdop7pZXYI3WzJWC1uDd6'
-        self.access_token_secret = 'ZCwl7NJRHrzxgPMT9LWkQ0iYEaenwgh8rGIhAxYgXg21g'
+        self.consumer_key = 
+        self.consumer_secret = 
+        self.access_token = 
+        self.access_token_secret = 
 
         self.auth = tweepy.OAuthHandler(self.consumer_key, self.consumer_secret) #การอนุญาติเข้าถึง api
         self.auth.set_access_token(self.access_token, self.access_token_secret)
@@ -263,10 +263,10 @@ class MyWindowClass(QMainWindow, form_class):
 
     def world_trendy(self):
     
-        self.consumer_key = '9GXyu3njexATouPqEvT9qvu7V'
-        self.consumer_secret = 'ysgdFhBYcFclWLCC6oYiwpWCBXweQByzjfcqKs5Fm7yA7ZZdOC'
-        self.access_token = '2204801114-h1YxO5itngHgvylxfAFdop7pZXYI3WzJWC1uDd6'
-        self.access_token_secret = 'ZCwl7NJRHrzxgPMT9LWkQ0iYEaenwgh8rGIhAxYgXg21g'
+        self.consumer_key = 
+        self.consumer_secret = 
+        self.access_token = 
+        self.access_token_secret = 
 
         self.auth = tweepy.OAuthHandler(self.consumer_key, self.consumer_secret) #การอนุญาติเข้าถึง api
         self.auth.set_access_token(self.access_token, self.access_token_secret)
