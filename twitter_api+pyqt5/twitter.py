@@ -1,3 +1,4 @@
+# mini project : 6201012620139
 #ref :https://www.youtube.com/watch?v=HDjc3w1W9oA
 #ref : https://pbj0812.tistory.com/198
 #ref  : https://www.kaggle.com/drvaibhavkumar/twitter-data-analysis-using-tweepy
