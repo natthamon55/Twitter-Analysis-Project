@@ -5,6 +5,7 @@
 # search realtime & store
 # nlp thai & english
 # sentiment + 5 top word + wordcloud + store & update data +select time to show old data
+#web clewler thai & english
 from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QWidget,QTableWidget, QTableWidgetItem, QVBoxLayout
 from PyQt5 import QtCore, QtGui, QtWidgets, QtChart
 from PyQt5 import uic
