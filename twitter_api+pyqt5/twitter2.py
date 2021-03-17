@@ -765,17 +765,40 @@ class MyWindowClass(QMainWindow, form_class):
         #crypto ex XRP-USD , BTC-USD ,XLM-USD,ADA-USD,DOT1-USD,DOGE-USD
         #thai stock ex PTT.BK,AOT.BK,SCC.BK,KTB.BK,SCB.BK,CPALL.BK,OR.BK
         #ชื่อย่อหุ้นไทยจะมีชื่อ .BK ตามหลังชื่อย่อหุ้น
-        df = pd.read_csv(path)
-        date = df['Date']
-        adj = df['Adj Close']
+        plt.style.use('ggplot')
+        data = pd.read_csv(path)
+    
+        ohlc = data.loc[:, ['Date', 'Open', 'High', 'Low', 'Close']]
+        ohlc['Date'] = pd.to_datetime(ohlc['Date'])
+        ohlc['Date'] = ohlc['Date'].apply(mpl_dates.date2num)
+        ohlc = ohlc.astype(float)
 
-        plt.plot(date,adj, 'g--')
-        plt.xlabel('DATE')
-        plt.ylabel('Adj Close')
-        plt.title(self.stock1.text()) 
+        # Creating Subplots
+        fig, ax = plt.subplots()
+        candlestick_ohlc(ax, ohlc.values, width=0.6, colorup='green', colordown='red', alpha=0.8)
+
+        # Setting labels & titles
+        ax.set_xlabel('Date')
+        ax.set_ylabel('Price')
+
+        # Formatting Date
+        date_format = mpl_dates.DateFormatter('%d-%m-%Y')
+        ax.xaxis.set_major_formatter(date_format)
+        fig.autofmt_xdate()
+
+        fig.tight_layout()
+
+        ohlc['SMA5'] = ohlc['Close'].rolling(5).mean()
+        ax.plot(ohlc['Date'], ohlc['SMA5'], color='green', label='SMA5')
+        #เส้น SMA ย่อมาจากคำว่า Simple Moving Average ซึ่งเป็นการหาค่าเฉลี่ยอย่างง่าย 
+        #ปกติแล้วเส้น SMA นิยมนำมาใช้มองหาแนวโน้มของราคา และยังช่วยมองหาเส้นแนวรับราคา หรือแนวต้านราคาไปในตัวด้วย
+
+        fig.suptitle(name +' with SMA5')
+
+        plt.legend()
+
         plt.savefig('C:/software/software2/pic/stock.jpg')
         self.graph.setStyleSheet('border-image: url(C:/software/software2/pic/stock.jpg);')
-
 #-------------เรียกใช้งานโปรแกรม--------------------------#
 app = QApplication(sys.argv)
 myWindow = MyWindowClass()
