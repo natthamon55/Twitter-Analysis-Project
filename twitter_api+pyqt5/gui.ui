@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TwitterApi</class>
+ <widget class="QMainWindow" name="TwitterApi">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1788</width>
+    <height>1040</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TongGa</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(198, 233, 239);</string>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btnopen">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>10</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 127);
+font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 220, 196);</string>
+    </property>
+    <property name="text">
+     <string>OPEN CSV</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>30</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Columns :</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox">
+    <property name="geometry">
+     <rect>
+      <x>1160</x>
+      <y>20</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+background-color: rgb(255, 221, 166);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnshow">
+    <property name="geometry">
+     <rect>
+      <x>1290</x>
+      <y>20</y>
+      <width>93</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(184, 255, 139);</string>
+    </property>
+    <property name="text">
+     <string>Show</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>60</y>
+      <width>1141</width>
+      <height>931</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(181, 227, 255);</string>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Analysis</string>
+     </attribute>
+     <widget class="QTabWidget" name="tabWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>30</y>
+        <width>521</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(224, 250, 255);</string>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>Headline </string>
+       </attribute>
+       <widget class="QTextBrowser" name="textnews">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>511</width>
+          <height>391</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 243, 180);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>News Sentiment</string>
+       </attribute>
+       <widget class="QTextBrowser" name="sent_news">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>521</width>
+          <height>391</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QTabWidget" name="tabWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>511</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(215, 247, 255);</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Twit Sentiment</string>
+       </attribute>
+       <widget class="QTextBrowser" name="sent">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>511</width>
+          <height>401</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Top-Hashtag</string>
+       </attribute>
+       <widget class="QTextBrowser" name="topw">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>501</width>
+          <height>401</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QTextBrowser" name="graph">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>480</y>
+        <width>521</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(216, 248, 255);</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Table</string>
+     </attribute>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1131</width>
+        <height>891</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="runtime">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>10</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 174, 185);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>20</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>RUN TIME :</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>70</y>
+      <width>331</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 192, 254);
+background-color: rgb(170, 255, 127);</string>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="tab1">
+     <attribute name="title">
+      <string>Thai</string>
+     </attribute>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>331</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(248, 203, 255);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab2">
+     <attribute name="title">
+      <string>World</string>
+     </attribute>
+     <widget class="QComboBox" name="comboBox2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>321</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(151, 255, 149);</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>270</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 11pt &quot;MS Shell Dlg 2&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string>Twitter :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>260</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnsearch">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>610</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 255);
+background-color: rgb(170, 255, 255);
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string>Search</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>520</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 20pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>350</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>News :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="search_news">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>340</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>90</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Trend Twit :</string>
+    </property>
+   </widget>
+   <widget class="QDateEdit" name="dateEdit">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>510</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <property name="dateTime">
+     <datetime>
+      <hour>0</hour>
+      <minute>0</minute>
+      <second>0</second>
+      <year>2021</year>
+      <month>1</month>
+      <day>1</day>
+     </datetime>
+    </property>
+    <property name="minimumDateTime">
+     <datetime>
+      <hour>0</hour>
+      <minute>0</minute>
+      <second>0</second>
+      <year>1752</year>
+      <month>9</month>
+      <day>14</day>
+     </datetime>
+    </property>
+    <property name="maximumTime">
+     <time>
+      <hour>23</hour>
+      <minute>59</minute>
+      <second>59</second>
+     </time>
+    </property>
+    <property name="currentSection">
+     <enum>QDateTimeEdit::DaySection</enum>
+    </property>
+    <property name="displayFormat">
+     <string>dd/mM/yyyy</string>
+    </property>
+    <property name="calendarPopup">
+     <bool>true</bool>
+    </property>
+    <property name="currentSectionIndex">
+     <number>0</number>
+    </property>
+    <property name="timeSpec">
+     <enum>Qt::TimeZone</enum>
+    </property>
+    <property name="date">
+     <date>
+      <year>2021</year>
+      <month>1</month>
+      <day>1</day>
+     </date>
+    </property>
+   </widget>
+   <widget class="QDateEdit" name="dateEdit2">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>510</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <property name="dateTime">
+     <datetime>
+      <hour>0</hour>
+      <minute>0</minute>
+      <second>0</second>
+      <year>2021</year>
+      <month>1</month>
+      <day>1</day>
+     </datetime>
+    </property>
+    <property name="displayFormat">
+     <string>dd/MM/yyyy</string>
+    </property>
+    <property name="calendarPopup">
+     <bool>true</bool>
+    </property>
+    <property name="timeSpec">
+     <enum>Qt::TimeZone</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>510</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>DATE :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>420</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Stock :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="stock1">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>420</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>260</y>
+      <width>181</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Users/PavilionGaming/OneDrive/รูปภาพ/search.png</pixmap>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1788</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
