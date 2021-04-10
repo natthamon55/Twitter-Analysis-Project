@@ -250,7 +250,7 @@ class MyWindowClass(QMainWindow, form_class):
 
         end = time.time()
         t1 = end-start #จับเวลารัน
-        self.runtime.setText(str(t1)) 
+        print(f'time :{t1})
     
     def check_news(self,search,date1,date2):
         
