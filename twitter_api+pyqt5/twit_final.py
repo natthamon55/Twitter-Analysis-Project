@@ -1224,7 +1224,7 @@ class MyWindowClass(QMainWindow, form_class):
 
         #connect กับ ปุ่ม
         self.btnsearch.clicked.connect(self.search_part) #search twit & news
-        self.btnsearch.clicked.connect(self.doAction)
+        self.btnsearch.clicked.connect(self.doAction) #progress bar
 
         self.btnopen.clicked.connect(self.OpenFile) #open csv
         self.btnshow.clicked.connect(self.dataHead) #show csv
@@ -1291,7 +1291,7 @@ class MyWindowClass(QMainWindow, form_class):
         for i in range(101):
   
             # slowing down the loop
-            time.sleep(0.05)
+            time.sleep(0.01)
   
             # setting value to progress bar
             self.pbar.setValue(i)
