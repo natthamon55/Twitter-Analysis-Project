@@ -84,10 +84,10 @@ class Worker(QObject): #ทำงานกับเทรด #ห้ามยุ
 #------------------------Twitter---------------------------------------#   
     def twit(self): #real time 100 tweet
         #Getting authorization
-        self.consumer_key = '9GXyu3njexATouPqEvT9qvu7V'
-        self.consumer_secret = 'ysgdFhBYcFclWLCC6oYiwpWCBXweQByzjfcqKs5Fm7yA7ZZdOC'
-        self.access_token = '2204801114-h1YxO5itngHgvylxfAFdop7pZXYI3WzJWC1uDd6'
-        self.access_token_secret = 'ZCwl7NJRHrzxgPMT9LWkQ0iYEaenwgh8rGIhAxYgXg21g'
+        self.consumer_key =
+        self.consumer_secret = 
+        self.access_token = 
+        self.access_token_secret = 
 
         self.auth = tweepy.OAuthHandler(self.consumer_key, self.consumer_secret) #การอนุญาติเข้าถึง api
         self.auth.set_access_token(self.access_token, self.access_token_secret)
@@ -884,10 +884,10 @@ class MyWindowClass(QMainWindow, form_class):
 #-----------------------------------Trend Twitter-------------------------------------------------#
     def thai_trendy(self):
 
-        self.consumer_key = '9GXyu3njexATouPqEvT9qvu7V'
-        self.consumer_secret = 'ysgdFhBYcFclWLCC6oYiwpWCBXweQByzjfcqKs5Fm7yA7ZZdOC'
-        self.access_token = '2204801114-h1YxO5itngHgvylxfAFdop7pZXYI3WzJWC1uDd6'
-        self.access_token_secret = 'ZCwl7NJRHrzxgPMT9LWkQ0iYEaenwgh8rGIhAxYgXg21g'
+        self.consumer_key = 
+        self.consumer_secret = 
+        self.access_token = 
+        self.access_token_secret = 
 
         self.auth = tweepy.OAuthHandler(self.consumer_key, self.consumer_secret) #การอนุญาติเข้าถึง api
         self.auth.set_access_token(self.access_token, self.access_token_secret)
@@ -912,11 +912,10 @@ class MyWindowClass(QMainWindow, form_class):
 
     def world_trendy(self):
     
-        self.consumer_key = '9GXyu3njexATouPqEvT9qvu7V'
-        self.consumer_secret = 'ysgdFhBYcFclWLCC6oYiwpWCBXweQByzjfcqKs5Fm7yA7ZZdOC'
-        self.access_token = '2204801114-h1YxO5itngHgvylxfAFdop7pZXYI3WzJWC1uDd6'
-        self.access_token_secret = 'ZCwl7NJRHrzxgPMT9LWkQ0iYEaenwgh8rGIhAxYgXg21g'
-
+        self.consumer_key = 
+        self.consumer_secret = 
+        self.access_token = 
+        self.access_token_secret = 
         self.auth = tweepy.OAuthHandler(self.consumer_key, self.consumer_secret) #การอนุญาติเข้าถึง api
         self.auth.set_access_token(self.access_token, self.access_token_secret)
         self.api = tweepy.API(self.auth)
